@@ -1,0 +1,17 @@
+mandrill:
+  apikey: <Mandrill api key here>
+  inline_css: True
+  auto_html: True
+
+user:
+  -
+    name: <Your name>
+    email: <Your email>
+  -
+    name: <Another name>
+    email: <Another email>
+
+reddit:
+  subreddits:
+    - all
+    - programming
