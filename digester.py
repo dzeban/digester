@@ -1,19 +1,19 @@
 import sys
 import yaml
 
-import reddit
+import site_handler
 import mail
 
 def usage():
     print('{} <config>'.format(sys.argv[0]))
 
 def main(config):
-    for site, site_config in config['digest'].items():
-        if site == 'reddit':
-            submissions = reddit.monthly(site_config)
-            for user in config['users']:
-                mail.send(title = 'Reddit montly', to = user['email'],
-                        submissions = submissions, mandrill_config=config['mandrill'])
+    content = []
+    for site in config['sites']:
+        content.append(site_handler.get_content(site))
+
+    for user in config['users']:
+        mail.send(user, content, config['mail'])
 
 if __name__ == '__main__':
     # argparse
