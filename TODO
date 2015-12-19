@@ -1,0 +1,12 @@
+Add habrahabr site handler
+--------------------------
+
+Site handler content generation
+-------------------------------
+
+Move from fixed template for all sites to site-local content generation
+
+  For example, reddit links might be with site names like on reddit itself
+  * Some very clever link (nytimes.com)
+ 
+ 
