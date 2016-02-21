@@ -8,5 +8,26 @@ Move from fixed template for all sites to site-local content generation
 
   For example, reddit links might be with site names like on reddit itself
   * Some very clever link (nytimes.com)
+
+Simple web site
+---------------
+
+Create simple website at ribbo.net. It must have:
+
+* Users - registration, login
+* Configure subscriptions
+* Previous digest pages (see "HTML page" item)
  
- 
+HTML page
+---------
+
+Create page for digest and provide link to in email.
+
+"View on ribbo.net" that will point to
+
+http://ribbo.net/digest/fa247e88847bd1a077a378f8607ba83dea329e9f4adffb0c33c5012abb8c039f
+
+where the long line is the sha256 hash of the digest mail. So 2 users may view
+the same page if their subscriptions are identical.
+
+It will be stored in DB as is.
